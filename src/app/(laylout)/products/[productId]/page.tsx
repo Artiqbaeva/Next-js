@@ -1,5 +1,5 @@
-import NotFound from "@/app/not-found";
 import { Metadata } from "next";
+import NotFound from "@/app/not-found";
 
 export const metadata: Metadata = {
   title: "Product Detail",

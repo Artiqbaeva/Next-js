@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero";
-import Products from "@/components/Products";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

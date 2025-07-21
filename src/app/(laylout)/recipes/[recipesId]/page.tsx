@@ -1,3 +1,4 @@
+import NotFound from "@/app/not-found";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,7 +18,7 @@ const RecipeDetailPage = async ({ params }: RecipesDetailProps) => {
   const res = await fetch(`https://dummyjson.com/recipes/${recipeId}`, { cache: "force-cache" });
 
   if (!res.ok) {
-    return <div>Recipe not found</div>;
+    NotFound()
   }
 
   const recipe = await res.json();

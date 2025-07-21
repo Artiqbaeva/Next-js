@@ -1,4 +1,4 @@
-import Post from "@/components/Post";
+import Post from "@/components/Posts";
 import { Metadata } from "next";
 import React from "react";
 

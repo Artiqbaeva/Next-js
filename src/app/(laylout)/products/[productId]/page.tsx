@@ -18,7 +18,7 @@ const ProductDetailPage = async ({ params }: ProductDetailProps) => {
   const res = await fetch(`https://dummyjson.com/products/${productId}`, { cache: "force-cache" });
 
   if (!res.ok) {
-    NotFound()
+    return <NotFound />;
   }
 
   const product = await res.json();

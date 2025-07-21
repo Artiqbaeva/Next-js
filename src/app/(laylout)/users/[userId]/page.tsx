@@ -18,7 +18,8 @@ const RecipeDetailPage = async ({ params }: UsersDetailProps) => {
   const res = await fetch(`https://dummyjson.com/users/${userId}`, { cache: "force-cache" });
 
   if (!res.ok) {
-    NotFound();
+    return <NotFound />;
+  
   }
 
   const user = await res.json();

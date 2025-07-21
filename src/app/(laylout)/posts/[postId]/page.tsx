@@ -18,7 +18,7 @@ const PostsDetailPage = async ({ params }: PostsDetailProps) => {
   });
 
   if (!res.ok) {
-    NotFound();
+    return <NotFound />
   }
 
   const post = await res.json();

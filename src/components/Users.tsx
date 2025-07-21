@@ -10,9 +10,7 @@ const Users = ({ data }: { data: any }) => {
           href={`/users/${item.id}`}
           className="border rounded-lg shadow hover:shadow-lg transition duration-300 p-4 flex flex-col"
         >
-        <div
-         
-          
+        <div    
         >
           <h2 className="text-lg font-semibold mb-2">
             {item.firstName} {item.lastName}

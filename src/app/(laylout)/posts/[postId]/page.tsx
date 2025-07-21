@@ -1,5 +1,5 @@
+import NotFound from "@/app/not-found";
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Posts Detail",
@@ -7,18 +7,18 @@ export const metadata: Metadata = {
 };
 
 interface PostsDetailProps {
-  params: {
-    postId: string;
-  };
+  params: { postId: string };
 }
 
 const PostsDetailPage = async ({ params }: PostsDetailProps) => {
   const { postId } = params;
 
-  const res = await fetch(`https://dummyjson.com/posts/${postId}`, { cache: "force-cache" });
+  const res = await fetch(`https://dummyjson.com/posts/${postId}`, {
+    cache: "force-cache",
+  });
 
   if (!res.ok) {
-    notFound();
+    NotFound();
   }
 
   const post = await res.json();

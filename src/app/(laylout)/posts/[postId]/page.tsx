@@ -1,34 +1,30 @@
-import NotFound from "@/app/not-found";
-import { Metadata } from "next";
+// import NotFound from "@/app/not-found";
+// import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Posts Detail",
-  description: "Detail page for each post",
-};
+// export const metadata: Metadata = {
+//   title: "Post Detail",
+//   description: "Detail page for each post",
+// };
 
-interface PostsDetailProps {
-  params: { postId: string };
-}
+// const PostsDetailPage = async ({ params }: { params: { postId: string } }) => {
+//   const { postId } = params;
 
-const PostsDetailPage = async ({ params }: PostsDetailProps) => {
-  const { postId } = params;
+//   const res = await fetch(`https://dummyjson.com/posts/${postId}`, {
+//     cache: "force-cache",
+//   });
 
-  const res = await fetch(`https://dummyjson.com/posts/${postId}`, {
-    cache: "force-cache",
-  });
+//   if (!res.ok) {
+//     return <NotFound />;
+//   }
 
-  if (!res.ok) {
-    return <NotFound />
-  }
+//   const post = await res.json();
 
-  const post = await res.json();
+//   return (
+//     <div className="container mx-auto px-4 py-8">
+//       <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
+//       <p className="text-gray-600 mb-2">{post.body}</p>
+//     </div>
+//   );
+// };
 
-  return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-      <p className="text-gray-600 mb-2">{post.body}</p>
-    </div>
-  );
-};
-
-export default PostsDetailPage;
+// export default PostsDetailPage;

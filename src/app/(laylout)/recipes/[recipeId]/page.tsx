@@ -30,7 +30,7 @@ const RecipeDetailPage = async ({ params }: RecipesDetailProps) => {
       <img
         src={recipe.image}
         alt={recipe.name}
-        className="w-full max-w-md object-cover rounded mb-4"
+        className="w-full max-w-md object-contain rounded mb-4"
       />
       <p className="text-gray-600 mb-2">Cuisine: {recipe.cuisine}</p>
       <p className="text-gray-600 mb-2">Difficulty: {recipe.difficulty}</p>

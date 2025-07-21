@@ -17,6 +17,7 @@ const ProductDetailPage = async ({ params }: { params: { productId: string } }) 
     <div>
       <h1>{product.title}</h1>
       <p>{product.description}</p>
+      <p>{product.price}</p>
     </div>
   );
 };
